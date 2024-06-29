@@ -4,7 +4,11 @@ import { useRecoilState, useSetRecoilState, useRecoilValue } from "recoil";
 import { useCookies } from "react-cookie";
 import PropTypes from "prop-types";
 
-import { userInfoState, waitingPlayerListState } from "@/recoil/userState";
+import {
+  userInfoState,
+  waitingPlayerListState,
+  playingPlayerListState
+} from "@/recoil/userState";
 import { roomIdState, roomInfoListState, roomInfoState } from "@/recoil/roomState";
 import { bgVolumeState, fxVolumeState } from "@/recoil/soundState";
 import { remoteApiConfigState } from "@/recoil/boardState";
@@ -64,6 +68,8 @@ const GameModal = ({
   const [roomInfo, setRoomInfo] = useRecoilState(roomInfoState);
   const setRoomId = useSetRecoilState(roomIdState);
   const setWaitingPlayerList = useSetRecoilState(waitingPlayerListState);
+  const [playingPlayerList, setPlayingPlayerList] =
+    useRecoilState(playingPlayerListState);
   const setRemoteApiConfig = useSetRecoilState(remoteApiConfigState);
   const [roomNumber, setRoomNumber] = useState(null);
 
@@ -722,6 +728,13 @@ const GameModal = ({
                     loadRoom((room) => {
                       setRoomInfo(room);
                       setWaitingPlayerList(room.userList);
+                      if (playingPlayerList?.length !== 0) {
+                        const newPlayerList = playingPlayerList.map((player) => ({
+                          ...player,
+                          score: 0
+                        }));
+                        setPlayingPlayerList(newPlayerList);
+                      }
                     });
                     setIsOpen(false);
                     setIsPlaying(false);
