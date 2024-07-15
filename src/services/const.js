@@ -1,6 +1,6 @@
 export const PUBLIC_URL = process.env.PUBLIC_URL;
 export const BASE_URL = process.env.REACT_APP_BASE_URL;
-export const SOCKET_URL = process.env.REACT_APP_SOCKET_URL;
+export const SOCKET_PATH = process.env.REACT_APP_SOCKET_PATH;
 
 const KAKAO_CLIENT_ID = process.env.REACT_APP_KAKAO_CLIENT_ID;
 const REDIRECT_URI = `${BASE_URL}/member/kakao`;
