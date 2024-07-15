@@ -1,12 +1,12 @@
 import io from "socket.io-client";
 import { Cookies } from "react-cookie";
-import { SOCKET_URL } from "./const";
+import { PUBLIC_URL, SOCKET_PATH } from "./const";
 
 const cookies = new Cookies();
 
 const connectSocket = () => {
-  return io(SOCKET_URL, {
-    path: "/game/socket.io/",
+  return io(PUBLIC_URL, {
+    path: SOCKET_PATH,
     // transports: ["websocket"],
     reconnection: false,
     extraHeaders: {
