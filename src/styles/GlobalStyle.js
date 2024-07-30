@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
   // 노토 산스
   @font-face {
     font-family: 'Noto Sans KR';
-    src: url('${PUBLIC_URL}/fonts/NotoSansKR-VariableFont_wght.ttf') format('truetype');
+    src: url('${PUBLIC_URL}/fonts/NotoSansKR-VariableFont_wght.woff2') format('woff2');
     font-weight: 100 900;
   }
 
@@ -20,27 +20,27 @@ const GlobalStyle = createGlobalStyle`
   // 구기체
   @font-face {
     font-family: 'Gugi';
-    src: url('${PUBLIC_URL}/fonts/Gugi-Regular.ttf') format('truetype');
+    src: url('${PUBLIC_URL}/fonts/Gugi-Regular.woff2') format('woff2');
     font-weight: 400;
   }
 
   // 던전앤파이터 비트비트체
   @font-face {
     font-family: 'DNFBitBitv2';
-    src: url('${PUBLIC_URL}/fonts/DNFBitBitv2.otf') format('opentype');
+    src: url('${PUBLIC_URL}/fonts/DNFBitBitv2.woff2') format('woff2');
     font-weight: 100 900;
   }
 
   // 배달의민족 한나체
   @font-face {
     font-family: 'Hanna';
-    src: url('${PUBLIC_URL}/fonts/BMHANNA_11yrs_ttf.ttf') format('truetype');
+    src: url('${PUBLIC_URL}/fonts/BMHANNA_11yrs.woff2') format('woff2');
   }
 
   // 배달의민족 한나체 Air
   @font-face {
     font-family: 'BMHANNAAir';
-    src: url('${PUBLIC_URL}/fonts/BMHANNAAir_ttf.ttf') format('truetype');
+    src: url('${PUBLIC_URL}/fonts/BMHANNAAir.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
   }
@@ -48,19 +48,19 @@ const GlobalStyle = createGlobalStyle`
   // Alfa Slab One
   @font-face {
     font-family: 'AlfaSlabOne';
-    src: url('${PUBLIC_URL}/fonts/AlfaSlabOne-Regular.ttf') format('truetype');
+    src: url('${PUBLIC_URL}/fonts/AlfaSlabOne-Regular.woff2') format('woff2');
   }
 
   // Zen Dots
   @font-face {
     font-family: 'ZenDots';
-    src: url('${PUBLIC_URL}/fonts/ZenDots-Regular.ttf') format('truetype');
+    src: url('${PUBLIC_URL}/fonts/ZenDots-Regular.woff2') format('woff2');
   }
 
   // Poller One
   @font-face {
     font-family: 'PollerOne';
-    src: url('${PUBLIC_URL}/fonts/PollerOne-Regular.ttf') format('truetype');
+    src: url('${PUBLIC_URL}/fonts/PollerOne-Regular.woff2') format('woff2');
   }
 
   * {
